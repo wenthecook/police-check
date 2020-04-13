@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "police-check"
+    }
+  },
+  "defaultProject": "police-check",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,20 @@
+<div *ngIf="currentCustomer">
+  <app-detail [customer]="currentCustomer"></app-detail>
+  <button (click)="goBack()">Back</button>
+
+  <p>Please upload a clear copy of your passport</p>
+
+  <div *ngIf="uploadResponse && uploadResponse.status === 'error'">
+  </div>
+
+  <div *ngIf="uploadResponse && uploadResponse.status === 'success'">
+    <a href="link"></a>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="file" name="avatar" id="" (change)="onFileSelect($event)" />
+    <button type="submit">Upload</button>
+  </form>
+
+</div>
+

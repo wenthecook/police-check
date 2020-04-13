@@ -1,0 +1,12 @@
+<div *ngIf="currentCustomer">
+  <p>
+    Congratulation!
+  </p>
+</div>
+<app-detail [customer]="currentCustomer"></app-detail>
+<div>
+  <p>
+    Thek preview of the file uploaded
+  </p>
+  <button (click)="goHome()">apply for a new polick check</button>
+</div>
