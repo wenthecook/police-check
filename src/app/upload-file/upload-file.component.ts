@@ -17,7 +17,7 @@ export class UploadFileComponent implements OnInit {
 
   form: FormGroup;
   uploadResponse;
-  uploadReady: boolean = false;
+  uploadReady = false;
 
   constructor(
     private customerDataService: CustomerDataService,
@@ -55,7 +55,7 @@ export class UploadFileComponent implements OnInit {
         console.log(err);
       }
     );
-    if (confirm("Are you ready to upload your file?")){
+    if (confirm('Are you ready to upload your file?')){
       this.router.navigate(['/success']);
     }
   }
