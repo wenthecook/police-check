@@ -6,6 +6,8 @@ import { UploadService } from '../upload.service';
 import { CustomerDataService } from '../customer-data.service';
 import { Customer } from '../Customer';
 
+import { ApiService } from '../api.service';
+
 @Component({
   selector: 'app-upload-file',
   templateUrl: './upload-file.component.html',
@@ -24,6 +26,7 @@ export class UploadFileComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private uploadService: UploadService,
+    private apiService: ApiService,
   ) { }
 
   ngOnInit(): void {
@@ -61,7 +64,8 @@ export class UploadFileComponent implements OnInit {
   }
 
   getCurrentCustomer() {
-    this.currentCustomer = this.customerDataService.getCurrentCustomer();
+    this.currentCustomer = this.apiService.currentCustomer;
+    console.log('Current customer is: ', this.currentCustomer);
   }
 
   goBack() {

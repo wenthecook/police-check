@@ -12,6 +12,8 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
 import { DetailComponent } from './detail/detail.component';
 import { SuccessComponent } from './success/success.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { SuccessComponent } from './success/success.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

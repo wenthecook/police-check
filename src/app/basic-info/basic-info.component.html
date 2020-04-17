@@ -2,7 +2,20 @@
   form for customers
 </div>
 
-<form
+<form #f = "ngForm">
+  <label>Name</label>
+    <input type="text" name="name" [(ngModel)] = "selectedCustomer.name">
+    <br>
+    <label>Address</label>
+    <input type="text" name="address" [(ngModel)] = "selectedCustomer.address">
+    <br>
+    <label>Passport ID:</label>
+    <input type="text" name="passportid" [(ngModel)] = "selectedCustomer.passportid">
+    <br>
+    <input type="button" (click)="createCustomer(f)" value="Create a customer">
+</form>
+
+<!-- <form
   [formGroup]="form"
   (ngSubmit)="onSubmit(form.value)"
 >
@@ -29,7 +42,4 @@
    </div>
   <button type="submit">Submit</button>
   <button (click)="backToDashboard()">Back</button>
-</form>
-
-
-
+</form> -->
