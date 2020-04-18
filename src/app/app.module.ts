@@ -13,6 +13,8 @@ import { DetailComponent } from './detail/detail.component';
 import { SuccessComponent } from './success/success.component';
 
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     BasicInfoComponent,
     UploadFileComponent,
     DetailComponent,
-    SuccessComponent
+    SuccessComponent,
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

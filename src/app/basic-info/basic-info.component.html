@@ -2,7 +2,55 @@
   form for customers
 </div>
 
-<form #f = "ngForm">
+<div class="form-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <form #f = "ngForm" class="form-horizontal">
+          <span class="heading">Personal Information</span>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="NAME" name="name" [(ngModel)] = "selectedCustomer.name"
+                   required pattern="^([a-zA-Z]+)(\s?)([a-zA-Z]*)$" #cusName="ngModel">
+            <i class="fa fa-user"></i>
+            <span class="text" *ngIf="cusName.errors?.required && cusName.touched">
+              Name is required
+            </span>
+            <span class="text" *ngIf="cusName.errors?.pattern && cusName.touched">
+              Name can only contain the letters a-z or A-Z and at most one space in the middle.
+            </span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="ADDRESS" name="address" [(ngModel)] = "selectedCustomer.address"
+                   required #cusAddress="ngModel">
+            <i class="fa fa-pencil fa-fw"></i>
+            <span class="text" *ngIf="cusAddress.errors?.required && cusAddress.touched">
+              Address is required.
+            </span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="PASSPORT ID" name="passportid" [(ngModel)] = "selectedCustomer.passportid"
+                   required #cusPassportid="ngModel" pattern="[0-9]+">
+            <i class="fa fa-book fa-fw"></i>
+            <span class="text" *ngIf="cusPassportid.errors?.required && cusPassportid.touched">
+              Passport ID is required.
+            </span>
+            <span class="text" *ngIf="cusPassportid.errors?.pattern && cusPassportid.touched">
+              Passport ID should be number.
+            </span>
+          </div>
+          <div class="form-group">
+            <span class="text">Please check info carefully</span>
+            <!--  && cusName.touched && cusAddress.touched && cusPassportid.touched -->
+            <input *ngIf="!(cusName.errors?.required) && !(cusName.errors?.pattern) && !(cusAddress.errors?.required) && !(cusPassportid.errors?.required) && !(cusPassportid.errors?.pattern)"
+                   type="button" class="btn btn-default" (click)="createCustomer(f)" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <form #f = "ngForm">
   <label>Name</label>
     <input type="text" name="name" [(ngModel)] = "selectedCustomer.name">
     <br>
@@ -13,7 +61,7 @@
     <input type="text" name="passportid" [(ngModel)] = "selectedCustomer.passportid">
     <br>
     <input type="button" (click)="createCustomer(f)" value="Create a customer">
-</form>
+</form> -->
 
 <!-- <form
   [formGroup]="form"

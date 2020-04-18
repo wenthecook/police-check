@@ -1,0 +1,27 @@
+/* footer */
+.htmleaf-footer{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto auto 0 auto;
+  position: fixed;
+  bottom: 0;
+  color:black;
+  background: #dbdbdb;
+}
+.htmleaf-small{font-size: 0.8em;}
+
+.link-box{
+  display: inline-block;
+}
+.link-box a{
+  color: black;
+}
+
+.copyright{
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  left: 0;
+  text-align: left;
+}

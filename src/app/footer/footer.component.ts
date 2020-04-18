@@ -1,22 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
-import { CustomerDataService } from '../customer-data.service';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-top-bar',
-  templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class TopBarComponent implements OnInit {
+export class FooterComponent implements OnInit {
 
   constructor(
-    private location: Location,
-    private customerDataServic: CustomerDataService,
-    private router: Router,
     private apiService: ApiService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -45,5 +41,4 @@ export class TopBarComponent implements OnInit {
       this.router.navigate(['/aboutus']);
     }
   }
-
 }

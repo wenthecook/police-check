@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { SuccessComponent } from './success/success.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'basic-info', component: BasicInfoComponent},
   { path: 'upload', component: UploadFileComponent},
   { path: 'success', component: SuccessComponent},
+  { path: 'aboutus', component: AboutUsComponent},
 ];
 
 @NgModule({

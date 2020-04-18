@@ -2,6 +2,8 @@
   <app-detail [customer]="currentCustomer"></app-detail>
   <button (click)="goBack()">Back</button>
 
+
+
   <p>Please upload a clear copy of your passport</p>
 
   <div *ngIf="uploadResponse && uploadResponse.status === 'error'">

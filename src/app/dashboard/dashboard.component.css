@@ -1,0 +1,30 @@
+/*nav*/
+.htmleaf-demo a{color: #007bff;text-decoration: none;}
+.htmleaf-demo{width: 100%;padding-bottom: 1.2em;}
+.htmleaf-demo a{display: inline-block;margin: 0.5em;padding: 0.6em 1em;border: 3px solid #007bff;font-weight: 700;}
+.htmleaf-demo a:hover{opacity: 0.6;}
+.htmleaf-demo a.current{background:#1d7db1;color: #007bff; }
+/* Top Navigation Style */
+picture{
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+img{
+  width: 100%;
+}
+picture .description{
+  position:absolute;
+  z-index:2;
+  top:0;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  width: 100%;
+}
+picture b{
+  font-size: 3.8vw;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(100,100,100);
+}

@@ -28,4 +28,8 @@ export class ApiService {
     this.currentCustomer.address = customer.address;
     this.currentCustomer.passportid = customer.passportid;
   }
+
+  clear(): void {
+    this.currentCustomer = {name: null, address: null, passportid: null};
+  }
 }

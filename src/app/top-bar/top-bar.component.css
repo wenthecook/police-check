@@ -1,3 +1,105 @@
-a {
-  text-decoration: solid;
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+.logo_holder{
+  max-width: fit-content;
+  /* border: solid; */
+  margin: auto;
+  /* make the items centeral align */
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  /* -webkit-justify-content: center;
+          justify-content: center; */
+}
+.logo_holder h1{
+  padding-left: 20px;
+}
+.logo{
+  display: inline-block;
+  /* border: solid; */
+}
+.logo_holder h1 {
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
+  color: #007bff;
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.logo_holder h1 span {
+  display: block;
+  font-size: 60%;
+  font-weight: 400;
+  padding: 0.8em 0 0.5em 0;
+  color: #c3c8cd;
+}
+
+/* Header */
+.htmleaf-header{
+  padding: 1em 190px 1em;
+  letter-spacing: -1px;
+  text-align: center;
+  background: #007bff;
+}
+.htmleaf-header h1 {
+  color: #D5D6E2;
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.htmleaf-header h1 span {
+  display: block;
+  font-size: 60%;
+  font-weight: 400;
+  padding: 0.8em 0 0.5em 0;
+  color: #c3c8cd;
+}
+
+.htmleaf-links {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.htmleaf-links::after {
+  cursor: default;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -1px;
+	width: 2px;
+	height: 100%;
+	background: #dbdbdb;
+	content: '';
+	-webkit-transform: rotate3d(0,0,1,22.5deg);
+	transform: rotate3d(0,0,1,22.5deg);
+}
+
+.htmleaf-icon {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0em 0;
+  width: 1.5em;
+  text-decoration: none;
+}
+
+.htmleaf-icon span {
+  display: none;
+}
+
+.htmleaf-icon:before {
+  margin: 0 5px;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'icomoon';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
 }
