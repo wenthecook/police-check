@@ -70,8 +70,8 @@ export class UploadFileComponent implements OnInit {
 
   goBack() {
     if (confirm('Do you want to go back and delete the input information?')){
-      this.customerDataService.clear();
-      this.router.navigate(['/']);
+      this.apiService.clear();
+      this.router.navigate(['/basic-info']);
     }
   }
 

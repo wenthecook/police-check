@@ -1,3 +1,45 @@
-<p><span>Name: </span> {{customer.name}}</p>
-<p><span>Address: </span>{{customer.address}}</p>
-<p><span>PassportId: </span>{{customer.passportid}}</p>
+<div class="form-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <form #f = "ngForm" class="form-horizontal">
+          <span class="heading" *ngIf="success==false">Personal Information</span>
+          <span class="heading" *ngIf="success==true">CONGRATULATIONS!</span>
+          <div class="form-group" *ngIf="success == false">
+            <span class="text" style="text-align: left; color: black;">Please check info carefully, and then upload a CLEAR copy of your passport.</span>
+          </div>
+          <div class="form-group" *ngIf="success == true">
+            <span class="text" style="text-align: left; color: black;">The application of {{customer.name}} is successfully uploaded.</span>
+          </div>
+          <div class="form-group">
+            <span class="text">Name: </span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="{{customer.name}}" name="name" disabled>
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="form-group">
+            <span class="text">Address: </span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="{{customer.address}}" name="address" disabled>
+            <i class="fa fa-pencil fa-fw"></i>
+          </div>
+          <div class="form-group">
+            <span class="text">Passport ID: </span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="{{customer.passportid}}" name="passportid" disabled>
+            <i class="fa fa-book fa-fw"></i>
+          </div>
+          <div class="form-group">
+            <span class="text" style="text-align: left; color: black;" *ngIf="success==false">If any information is wrong, please go back to change it.</span>
+            <span class="text" style="text-align: left; color: black;" *ngIf="success==true">If you have any further question, please call us without hesitation.</span>
+            <input *ngIf="success==false" type="button" class="btn btn-default" (click)="goBack()" value="Back">
+            <input *ngIf="success==true" type="button" class="btn btn-default" (click)="goBack()" value="Back to home">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

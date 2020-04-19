@@ -1,0 +1,21 @@
+.form-horizontal .form-control:hover{
+  cursor: text;
+  background-color: #007bff;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
+
+.form-group .btn:hover {
+  background-color: #007bff;
+  left: .1em;
+}

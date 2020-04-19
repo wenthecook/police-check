@@ -1,12 +1,7 @@
-<div *ngIf="currentCustomer">
-  <p>
-    Congratulation!
-  </p>
+<div class="steps">
+  <span class="step">Basic Information</span>
+  <span class="step">Upload Passport Copy</span>
+  <span class="step selected">Success</span>
 </div>
-<app-detail [customer]="currentCustomer"></app-detail>
-<div>
-  <p>
-    Thek preview of the file uploaded
-  </p>
-  <button (click)="goHome()">apply for a new polick check</button>
-</div>
+<app-detail [customer]="currentCustomer" [success]="true"></app-detail>
+

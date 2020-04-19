@@ -15,9 +15,14 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 .logo_holder h1{
   padding-left: 20px;
 }
+.logo_holder a{
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgb(100,100,100);
+}
 .logo{
   display: inline-block;
   /* border: solid; */
+  cursor: pointer;
 }
 .logo_holder h1 {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
